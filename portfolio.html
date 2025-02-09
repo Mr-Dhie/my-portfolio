@@ -30,7 +30,7 @@
 <body class="bg-gray-100 text-gray-900 font-sans leading-relaxed">
 
   <!-- Navbar -->
-  <header class=" min-w-[300px] overflow-x-auto bg-gray-900 text-white py-6">
+  <header class=" min-w-[375px] overflow-x-auto bg-gray-900 absolute w-full text-white py-6">
     <nav>
       <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
         <h1 class="text-3xl font-bold">The Real</h1>
@@ -47,7 +47,7 @@
           </button>
       </div>
         <!-- Mobile Navigation -->
-        <ul id="mobile-menu" class="hidden md:hidden flex flex-col absolute w-full items-center bg-gray-900 text-white space-y-4 py-4">
+        <ul id="mobile-menu" class="hidden md:hidden flex flex-col w-full items-center bg-gray-900 text-white space-y-4 py-4">
           <li><a href="#about" class="hover:text-indigo-300">About</a></li>
           <li><a href="#projects" class="hover:text-indigo-300">Projects</a></li>
           <li><a href="#contact" class="hover:text-indigo-300">Contact</a></li>
@@ -56,35 +56,39 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="min-w-[300px] overflow-x-auto bg-indigo-600  mx-auto h-screen text-white flex flex-col items-center justify-center space-y-8">
-    <div class=" flex flex-col items-center justify-center md:grid md:grid-cols-2 md:grid-rows-3 md:gap-4 max-w-7xl w-full h-screen ">
-      <div class="flex flex-col justify-center items-center row-span-2">
-        <h2 class="text-2xl my-8 font-extrabold fadeIn">From Technician to Programmer</h2>
-        <p class="text-l max-w-lg text-center fadeIn">After years of working as a Technician and SMT Operator, I realized I wasn't growing. 
-          So, I took a leap, dedicated years to learning programming, and now I'm building my future in tech.
-        </p>
+  <section id="hero" class="min-w-[375px]  overflow-x-auto bg-indigo-600  mx-auto text-white h-screen flex flex-col items-center justify-center space-y-8">
+    <div class="max-w-7xl h-screen flex flex-col items-center justify-center space-y-8 ">
+      <div class="flex flex-col md:flex-row md:justify-between p-6 mx-4 gap-12 justify-center items-center">
+          <div class="text-center md:max-w-2xl">
+            <h2 class="text-5xl my-8  font-extrabold fadeIn">From Technician to Programmer</h2>
+            <p class="text-lg  text-justify fadeIn">After years of working as a Technician and SMT Operator, I realized I wasn't growing. 
+              So, I took a leap, dedicated years to learning programming, and now I'm seeking my future in tech.
+            </p>
+          </div>
+
+          <div class="hidden md:flex  md:max-w-2xl">
+            <img class="max-w-auto max-h-auto" src="assets/profile.jpg" alt="profile picture"/>
+          </div>
       </div>
-      <div class="flex-col justify-center items-center row-span-2">
-        <img class="hidden md:flex max-h-auto object-contain" src="assets/profile.jpg" alt="profile picture"/>
-      </div>
-      <div class="md:col-span-2 flex justify-center">
+  
+      <div class="flex justify-center items-center absolute bottom-1">
         <a href="#projects" class="bg-yellow-500 text-black py-2 px-6 rounded-full text-lg hover:bg-yellow-400 transition-all duration-300 animate-bounce">See My Work</a>
       </div>
-    </div>
+  </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-24 px-4 bg-white">
+  <section id="about" class="min-w-[375px] content py-24 px-4 bg-white">
     <div class="max-w-7xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-indigo-600 mb-6 fadeIn">About Me</h2>
-      <p class="text-lg text-gray-700 max-w-2xl mx-auto">I am passionate about crafting beautiful and functional web applications. My expertise lies in front-end development, using technologies like HTML, CSS, JavaScript, and frameworks such as React and Tailwind CSS. When I'm not coding, I enjoy learning new technologies and improving my skills.</p>
-    </div>
+      <h2 class="text-3xl font-bold text-indigo-600 mb-6">About Me</h2>
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto text-justify">
+        I am passionate about crafting applications that help simplify users' tasks. My expertise lies in front-end development, using technologies like HTML, CSS, JavaScript, and frameworks such as React, Angular, and Tailwind CSS. I also have experience with back-end development using Java and Spring Boot. I enjoy building applications as a way to learn and grow, with my main priority right now being to gain knowledge and experience through the process.     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-24 bg-gray-50">
+  <section id="projects" class="min-w-[375px] content py-24 bg-gray-50">
     <div class="max-w-7xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-indigo-600 mb-6 fadeIn">My Projects</h2>
+      <h2 class="text-3xl font-bold text-indigo-600 mb-6">My Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         <!-- Project 1 -->
         <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl">
@@ -124,7 +128,7 @@
     <div class="max-w-7xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6 fadeIn">Get In Touch</h2>
       <p class="text-lg mb-12">Feel free to reach out to me for any projects or collaboration opportunities!</p>
-      <a href="mailto:youremail@example.com" class="bg-yellow-500 text-black py-2 px-6 rounded-full text-lg hover:bg-yellow-400 transition-all duration-300 slideUp">Contact Me</a>
+      <a href="mailto:drellolalia@gmail.com" class="bg-yellow-500 text-black py-2 px-6 rounded-full text-lg hover:bg-yellow-400 transition-all duration-300 slideUp">Contact Me</a>
     </div>
   </section>
 
@@ -150,6 +154,23 @@
     }
     lastScrollY = window.scrollY;
     });
+
+
+
+    // Set up the Intersection Observer
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fadeIn'); // Add the 'visible' class to trigger animation
+          observer.unobserve(entry.target); // Stop observing the element once it has appeared
+        }
+      });
+    }, { threshold: 0.5 }); // 50% of the element must be visible before triggering
+
+    // Observe the content element
+    const content = document.querySelector('.content');
+    observer.observe(content);
+
   </script>   
 </body>
 </html>
