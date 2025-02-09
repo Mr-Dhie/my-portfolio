@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Real</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html{
+      scroll-behavior: smooth;
+    }
+    /* Custom animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    .fadeIn {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes slideUp {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    .slideUp {
+      animation: slideUp 1s ease-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans leading-relaxed">
+
+  <!-- Navbar -->
+  <header class=" min-w-[300px] overflow-x-auto bg-gray-900 text-white py-6">
+    <nav>
+      <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+        <h1 class="text-3xl font-bold">The Real</h1>
+          <!-- Desktop Navigation -->
+          <ul class="hidden md:flex space-x-8">
+            <li><a href="#about" class="hover:text-indigo-300">About</a></li>
+            <li><a href="#projects" class="hover:text-indigo-300">Projects</a></li>
+            <li><a href="#contact" class="hover:text-indigo-300">Contact</a></li>
+          </ul>
+
+          <!-- Mobile Navigation Button -->
+          <button id="toggle-btn" class="md:hidden text-white text-3xl">
+            &#9776;
+          </button>
+      </div>
+        <!-- Mobile Navigation -->
+        <ul id="mobile-menu" class="hidden md:hidden flex flex-col absolute w-full items-center bg-gray-900 text-white space-y-4 py-4">
+          <li><a href="#about" class="hover:text-indigo-300">About</a></li>
+          <li><a href="#projects" class="hover:text-indigo-300">Projects</a></li>
+          <li><a href="#contact" class="hover:text-indigo-300">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="min-w-[300px] overflow-x-auto bg-indigo-600  mx-auto h-screen text-white flex flex-col items-center justify-center space-y-8">
+    <div class=" flex flex-col items-center justify-center md:grid md:grid-cols-2 md:grid-rows-3 md:gap-4 max-w-7xl w-full h-screen ">
+      <div class="flex flex-col justify-center items-center row-span-2">
+        <h2 class="text-2xl my-8 font-extrabold fadeIn">From Technician to Programmer</h2>
+        <p class="text-l max-w-lg text-center fadeIn">After years of working as a Technician and SMT Operator, I realized I wasn't growing. 
+          So, I took a leap, dedicated years to learning programming, and now I'm building my future in tech.
+        </p>
+      </div>
+      <div class="flex-col justify-center items-center row-span-2">
+        <img class="hidden md:flex max-h-auto object-contain" src="assets/profile.jpg" alt="profile picture"/>
+      </div>
+      <div class="md:col-span-2 flex justify-center">
+        <a href="#projects" class="bg-yellow-500 text-black py-2 px-6 rounded-full text-lg hover:bg-yellow-400 transition-all duration-300 animate-bounce">See My Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 px-4 bg-white">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-indigo-600 mb-6 fadeIn">About Me</h2>
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto">I am passionate about crafting beautiful and functional web applications. My expertise lies in front-end development, using technologies like HTML, CSS, JavaScript, and frameworks such as React and Tailwind CSS. When I'm not coding, I enjoy learning new technologies and improving my skills.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-indigo-600 mb-6 fadeIn">My Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <!-- Project 1 -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl">
+          <img src="https://via.placeholder.com/400x250" alt="Project 1" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-indigo-600 mb-4">Project 1</h3>
+            <p class="text-gray-700 mb-4">A description of the project goes here. This can include technologies used and goals accomplished.</p>
+            <a href="#" class="text-indigo-600 hover:underline">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl">
+          <img src="https://via.placeholder.com/400x250" alt="Project 2" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-indigo-600 mb-4">Project 2</h3>
+            <p class="text-gray-700 mb-4">Another description of a project with a few lines about its features and technologies used.</p>
+            <a href="#" class="text-indigo-600 hover:underline">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl">
+          <img src="https://via.placeholder.com/400x250" alt="Project 3" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-indigo-600 mb-4">Project 3</h3>
+            <p class="text-gray-700 mb-4">Brief summary of this project with key points of its creation and technologies used.</p>
+            <a href="#" class="text-indigo-600 hover:underline">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 px-4 bg-indigo-600 text-white">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6 fadeIn">Get In Touch</h2>
+      <p class="text-lg mb-12">Feel free to reach out to me for any projects or collaboration opportunities!</p>
+      <a href="mailto:youremail@example.com" class="bg-yellow-500 text-black py-2 px-6 rounded-full text-lg hover:bg-yellow-400 transition-all duration-300 slideUp">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>&copy; 2025. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden'); // Toggle the visibility of the mobile menu
+    });
+
+    // Close the mobile menu when the user scrolls down
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+    // Only close menu if it's open and user scrolls down
+    if (window.scrollY > lastScrollY && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.toggle('hidden');
+    }
+    lastScrollY = window.scrollY;
+    });
+  </script>   
+</body>
+</html>
